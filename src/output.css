@@ -1,17 +1,17 @@
 /*! tailwindcss v4.3.5 | MIT License | https://tailwindcss.com */
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
     --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
       "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol", "Noto Color Emoji";
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-      "Courier New", monospace;
-    --color-gray-100: oklch(96.7% 0.003 264.542);
-    --color-gray-800: oklch(27.8% 0.033 256.848);
+    --font-mono: "JetBrains Mono", monospace;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
-    --default-mono-font-family: var(--font-mono);
+    --default-mono-font-family: "JetBrains Mono", monospace;
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
   }
 }
 @layer base {
@@ -163,48 +163,70 @@
   }
 }
 @layer utilities {
-  .table {
-    display: table;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
-  }
-  .text-gray-800 {
-    color: var(--color-gray-800);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .bg-surface {
+    background-color: var(--surface);
   }
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+:root {
+  color-scheme: light;
+  --bg: #F5F3FA;
+  --surface: #FFFFFF;
+  --surface-2: #E8E2F2;
+  --text: #222039;
+  --text-muted: #68647A;
+  --border: #DCD5E8;
+  --primary: #8146C7;
+  --secondary: #D93683;
+  --accent: #087E83;
+  --highlight: #638F2C;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+.dark {
+  color-scheme: dark;
+  --bg: #090A12;
+  --surface: #121525;
+  --surface-2: #20263B;
+  --text: #F2F1FA;
+  --text-muted: #A7A6B8;
+  --border: #34344B;
+  --primary: #C77DFF;
+  --secondary: #FF5DA2;
+  --accent: #42E8E0;
+  --highlight: #B8F36B;
 }
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: block))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
-    }
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+  a {
+    text-decoration: none;
+  }
+  button {
+    cursor: pointer;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  ::selection {
+    background-color: var(--primary);
+    color: #090A12;
   }
 }
