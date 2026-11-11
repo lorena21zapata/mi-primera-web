@@ -1,0 +1,25 @@
+{
+  "name": "mi-primera-web",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto de desarrollo web con HTML y CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorena21zapata/mi-primera-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lorena21zapata/mi-primera-web/issues"
+  },
+  "homepage": "https://github.com/lorena21zapata/mi-primera-web#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}
