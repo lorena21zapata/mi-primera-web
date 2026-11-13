@@ -106,3 +106,51 @@
   }
 
 }
+/* ========================================
+   THEME COLORS: DARK MODE (DEFAULT)
+======================================== */
+
+:root {
+  color-scheme: dark;
+
+  --ink: #0A0614;
+  --panel: #120A24;
+  --plum: #1C1038;
+  --orchid: #FF4FD8;
+  --neon: #35F2FF;
+  --lilac: #B9A4FF;
+  --pearl: #F6EEFF;
+  --mute: #A99BC7;
+}
+
+/* ========================================
+   LIGHT MODE
+======================================== */
+
+html.light {
+  color-scheme: light;
+
+  --ink: #F5F2FA;
+  --panel: #FFFFFF;
+  --plum: #EDE5F8;
+  --orchid: #A928A0;
+  --neon: #087E8B;
+  --lilac: #7355A6;
+  --pearl: #21172C;
+  --mute: #665B73;
+}
+
+/* ========================================
+   TAILWIND COLOR MAPPING
+======================================== */
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-panel: var(--panel);
+  --color-plum: var(--plum);
+  --color-orchid: var(--orchid);
+  --color-neon: var(--neon);
+  --color-lilac: var(--lilac);
+  --color-pearl: var(--pearl);
+  --color-mute: var(--mute);
+}
