@@ -3,85 +3,614 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primer proyecto web</title>
+    <title>My Profiel </title>
     <link rel="stylesheet" href="./src/output.css">
+  <meta name="description" content="Translator specialized in localization, building a second career in software development.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CLI -->
+  <link href="./src/output.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Lorena Zapata Arias</h1>
-    </header>
 
-    <main>
-        <section id="hero" class="bg-surface">
-            
-            <h1>Translation · Localization · Web Development</h1>
-            <h2>Sobre mí</h2>
-        </section>
-        <section id="about-me" class="bg-surface-2">
-            <span>About me</span>
-            <img src="" alt=" ">
-            <p>I'm a translation student, interested in the intersection of language, technology and digital communication.
+<body class="relative overflow-x-hidden bg-ink font-sans text-pearl antialiased selection:bg-orchid selection:text-ink">
 
-                My academic journey has allowed me to explore translation, foreign languages, teaching methodologies and intercultural communication. I'm particularly interested in localization and how digital products can be adapted to different linguistic and cultural contexts.
+  <!-- Cyber grid + scanlines -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10
+    [background-image:linear-gradient(rgba(185,164,255,.07)_1px,transparent_1px),linear-gradient(90deg,rgba(185,164,255,.07)_1px,transparent_1px)]
+    [background-size:48px_48px]"></div>
 
-                Alongside my linguistic background, I'm developing my web development skills, exploring how technologies such as HTML, CSS and JavaScript can contribute to creating accessible, functional and user-centered digital experiences.
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 z-50 opacity-[0.07]
+    [background-image:repeating-linear-gradient(0deg,#fff_0,#fff_1px,transparent_1px,transparent_3px)]"></div>
 
-                I believe that language and technology complement each other, and I'm interested in building a professional path where both disciplines come together.
-            </p>
-        </section>
-        <section id="my-focus" class="bg-surface">
-            <div>
-            <h2>Tranducción</h2>
-            <p>
-                Traducción, revisión y análisis de textos. Interés en la precisión terminológica, la equivalencia y la comunicación entre diferentes lenguas y culturas.
-            </p>
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 border-b border-lilac/15 bg-ink/70 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4" aria-label="Main">
+
+      <a href="#top" class="font-mono text-sm tracking-widest text-pearl">
+        YN<span class="text-orchid">/</span>PORTFOLIO
+      </a>
+
+      <ul class="hidden items-center gap-8 font-mono text-xs uppercase tracking-widest text-mute md:flex">
+        <li><a class="transition hover:text-neon" href="#about">About</a></li>
+        <li><a class="transition hover:text-neon" href="#skills">Skills</a></li>
+        <li><a class="transition hover:text-neon" href="#toolkit">Toolkit</a></li>
+        <li><a class="transition hover:text-neon" href="#languages">Languages</a></li>
+        <li><a class="transition hover:text-neon" href="#education">Education</a></li>
+        <li><a class="transition hover:text-neon" href="#work">Work</a></li>
+      </ul>
+
+      <a href="#contact" class="cut bg-orchid px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-widest text-ink transition hover:bg-neon">
+        Contact
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="relative mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-20 lg:grid-cols-12 lg:pt-28">
+
+      <div aria-hidden="true" class="absolute -left-32 -top-10 -z-10 h-96 w-96 rounded-full bg-orchid/25 blur-3xl"></div>
+      <div aria-hidden="true" class="absolute -right-24 top-40 -z-10 h-96 w-96 rounded-full bg-neon/15 blur-3xl"></div>
+
+      <div class="lg:col-span-7">
+        <p class="eyebrow">// This is me </p>
+
+            <!-- Profile photo -->
+            <div class="relative mt-8 max-w-md">
+
+            <!-- Neon glow -->
+            <div class="absolute -inset-4 rounded-full bg-orchid/20 blur-3xl"></div>
+
+            <!-- Photo frame -->
+            <div class="card-edge relative">
+
+                <div class="cut overflow-hidden bg-panel p-1">
+                <img
+                    src="./img/photo.png"
+                    alt="Portrait of Lorena Zapata"
+                    class="cut aspect-[4/3] w-full object-cover object-center"
+                >
+                </div>
+
             </div>
-            <div>
-                <h2>Localización</h2>
-                <p>
-                    Adaptación de productos y contenidos a diferentes contextos culturales y lingüísticos. Interés en la localización de software, videojuegos y sitios web.
+
+            <!-- Decorative label -->
+            <div class="absolute -bottom-4 -right-3 border border-neon/50 bg-panel px-4 py-2">
+                <p class="font-mono text-xs uppercase tracking-widest text-neon">
+                Translator / Developer
                 </p>
             </div>
-            <div>
-            <h2>Desarrollo de software</h2>
-            <p>
-                Exploración y desarrollo de soluciones de software mediante la programación, creando experiencias digitales funcionales, intuitivas y adaptables.            </p>
+
             </div>
-        </section>
-        <section id="languages" class="bg-surface-2">
-            <h2>Idiomas</h2>
-            <p>Domino los siguientes idiomas:</p>
-            <ul>
-                <li>Español (nativo)</li>
-                <li>English (intermedio)</li>
-                <li>Frances (básico)</li>
+
+
+        <p class="mt-8 max-w-xl text-lg font-light leading-relaxed text-mute">
+          I'm a translator specialized in <span class="text-pearl">localization</span>, now training as a
+          <span class="text-pearl">software developer</span>. I bridge languages, cultures and code
+          so digital products feel native everywhere.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#work" class="cut bg-orchid px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-widest text-ink transition hover:bg-neon">
+            See my work
+          </a>
+
+          <a href="#contact" class="cut border border-neon/60 bg-neon/5 px-7 py-3.5 font-mono text-sm uppercase tracking-widest text-neon transition hover:bg-neon/15">
+            Say hello
+          </a>
+        </div>
+      </div>
+
+      <!-- Terminal card -->
+      <div class="lg:col-span-5">
+        <div class="card-edge animate-float motion-reduce:animate-none">
+          <div class="cut bg-panel font-mono text-sm">
+
+            <div class="flex items-center gap-2 border-b border-lilac/15 px-4 py-3">
+              <span class="h-3 w-3 rounded-full bg-orchid"></span>
+              <span class="h-3 w-3 rounded-full bg-lilac"></span>
+              <span class="h-3 w-3 rounded-full bg-neon"></span>
+              <span class="ml-3 text-xs text-mute">locale.json</span>
+            </div>
+
+            <pre class="overflow-x-auto p-5 leading-7"><code>{
+  <span class="text-neon">"name"</span>: <span class="text-orchid">"Lorena Zapata"</span>,
+  <span class="text-neon">"role"</span>: <span class="text-orchid">"Translator · Localization"</span>,
+  <span class="text-neon">"learning"</span>: <span class="text-orchid">"Software Dev"</span>,
+  <span class="text-neon">"locales"</span>: {
+    <span class="text-neon">"en"</span>: <span class="text-lilac">"C1"</span>,
+    <span class="text-neon">"fr"</span>: <span class="text-lilac">"B2"</span>,
+    <span class="text-neon">"es"</span>: <span class="text-lilac">"native"</span>
+  },
+  <span class="text-neon">"status"</span>: <span class="text-orchid">"compiling…"</span><span class="animate-pulse text-pearl">▌</span>
+}</code></pre>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div aria-hidden="true" class="overflow-hidden border-y border-lilac/15 bg-plum/40 py-4">
+      <div class="flex w-max animate-marquee gap-10 font-mono text-xs uppercase tracking-[0.3em] text-lilac motion-reduce:animate-none">
+
+        <span>Localization</span><span class="text-orchid">✦</span>
+        <span>i18n</span><span class="text-orchid">✦</span>
+        <span>Translation</span><span class="text-orchid">✦</span>
+        <span>HTML</span><span class="text-orchid">✦</span>
+        <span>CSS</span><span class="text-orchid">✦</span>
+        <span>Tailwind</span><span class="text-orchid">✦</span>
+        <span>JavaScript</span><span class="text-orchid">✦</span>
+        <span>Python</span><span class="text-orchid">✦</span>
+
+        <span>Localization</span><span class="text-orchid">✦</span>
+        <span>i18n</span><span class="text-orchid">✦</span>
+        <span>Translation</span><span class="text-orchid">✦</span>
+        <span>HTML</span><span class="text-orchid">✦</span>
+        <span>CSS</span><span class="text-orchid">✦</span>
+        <span>Tailwind</span><span class="text-orchid">✦</span>
+        <span>JavaScript</span><span class="text-orchid">✦</span>
+        <span>Python</span><span class="text-orchid">✦</span>
+
+      </div>
+    </div>
+
+    <!-- 01 ABOUT -->
+    <section id="about" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+      <div class="grid gap-12 lg:grid-cols-12">
+
+        <div class="lg:col-span-5">
+          <p class="eyebrow">01 / About</p>
+
+          <h2 class="h2">
+            Core 
+            <span class="font-serif font-normal italic text-orchid">Philosophy.</span>
+          </h2>
+
+          <p class="mt-6 leading-relaxed text-mute">
+            Translation taught me that every word carries context. Software is teaching me how to build the
+            systems that carry those words to people. I'm combining both to work on localization:
+            making products that don't just speak a language, but fit a culture.
+          </p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-3 lg:col-span-7">
+
+          <div class="card-edge">
+            <div class="card-body">
+              <p class="font-mono text-xs text-neon">01</p>
+              <h3 class="mt-4 font-display text-lg">Language</h3>
+              <p class="mt-3 text-sm leading-relaxed text-mute">
+                Precision, tone and terminology across English, French and Spanish.
+              </p>
+            </div>
+          </div>
+
+          <div class="card-edge">
+            <div class="card-body">
+              <p class="font-mono text-xs text-neon">02</p>
+              <h3 class="mt-4 font-display text-lg">Culture</h3>
+              <p class="mt-3 text-sm leading-relaxed text-mute">
+                Adapting messages so they feel natural, not translated.
+              </p>
+            </div>
+          </div>
+
+          <div class="card-edge">
+            <div class="card-body">
+              <p class="font-mono text-xs text-neon">03</p>
+              <h3 class="mt-4 font-display text-lg">Code</h3>
+              <p class="mt-3 text-sm leading-relaxed text-mute">
+                Exploring and developing software solutions through programming, with a focus on creating functional, intuitive, and adaptable digital experiences.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 SKILLS -->
+    <section id="skills" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+      <p class="eyebrow">02 / Skills</p>
+
+      <h2 class="h2">
+        Technical <span class="font-serif font-normal italic text-neon">&amp;</span> human.
+      </h2>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+
+        <div class="card-edge">
+          <div class="card-body p-8">
+            <h3 class="font-mono text-sm uppercase tracking-widest text-orchid">Technical</h3>
+
+            <ul class="mt-6 flex flex-wrap gap-3">
+              <li class="chip">EN ⇄ ES translation</li>
+              <li class="chip">Localization (L10N)</li>
+              <li class="chip">i18n fundamentals</li>
+              <li class="chip">Terminology &amp; glossaries</li>
+              <li class="chip">Linguistic QA</li>
+              <li class="chip">Responsive web design</li>
+              <li class="chip">Python scripting <span class="font-mono text-xs text-neon">· learning</span></li>
             </ul>
-        </section>
-        <section id="technical skills" class="bg-surface">
-            <h2>Habilidades técnicas</h2>
-            <p>Estoy aprendiendo las siguientes habilidades técnicas:</p>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Git y GitHub</li>
+          </div>
+        </div>
+
+        <div class="card-edge">
+          <div class="card-body p-8">
+            <h3 class="font-mono text-sm uppercase tracking-widest text-orchid">Soft</h3>
+
+            <ul class="mt-6 flex flex-wrap gap-3">
+              <li class="chip">Attention to detail</li>
+              <li class="chip">Cultural sensitivity</li>
+              <li class="chip">Clear communication</li>
+              <li class="chip">Self-directed learning</li>
+              <li class="chip">Time management</li>
+              <li class="chip">Collaboration</li>
+              <li class="chip">Curiosity</li>
             </ul>
-        </section>
-        <section id="projects-academic-work" class="bg-surface-2">
-            <h2>Proyectos académicos</h2>
-            <p>Aquí mostraré los proyectos que desarrolle durante mi formación académica.</p>
-        </section>
-        <section id="education" class="bg-surface">
-            <h2>Educación</h2>
-            <p>Aquí mostraré mi formación académica.</p>
-        </section>
-        <section id="contact" class="bg-surface-2">
-            <h2>Contacto</h2>
-            <p>Aquí mostraré mis datos de contacto.</p>
-        </section>
-        <footer>
-            <p>© 2024 Lorena Zapata Arias. Todos los derechos reservados.</p>
-        </footer>
-    </main>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03 TOOLKIT -->
+    <section id="toolkit" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">03 / Toolkit</p>
+          <h2 class="h2">
+            Currently <span class="font-serif font-normal italic text-orchid">installing…</span>
+          </h2>
+        </div>
+
+        <p class="max-w-sm text-sm text-mute">
+          Every tool below is in progress.
+      </div>
+
+      <ul class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- HTML -->
+        <li class="card-edge">
+          <div class="card-body">
+            <div class="flex items-center justify-between">
+              <span class="grid h-12 w-12 place-items-center border border-neon/40 bg-neon/5 font-mono text-sm text-neon">&lt;/&gt;</span>
+              <span class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-orchid">
+                <span class="h-2 w-2 animate-pulse rounded-full bg-orchid"></span>
+                In progress
+              </span>
+            </div>
+
+            <h3 class="mt-5 font-display text-lg">HTML</h3>
+            <p class="text-sm text-mute">Structure</p>
+
+            <div class="mt-5 h-1 overflow-hidden rounded bg-lilac/15">
+              <div class="h-full w-1/3 animate-slide rounded bg-gradient-to-r from-orchid to-neon motion-reduce:animate-none"></div>
+            </div>
+          </div>
+        </li>
+
+        <!-- CSS -->
+        <li class="card-edge">
+          <div class="card-body">
+            <div class="flex items-center justify-between">
+              <span class="grid h-12 w-12 place-items-center border border-neon/40 bg-neon/5 font-mono text-sm text-neon">{ }</span>
+              <span class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-orchid">
+                <span class="h-2 w-2 animate-pulse rounded-full bg-orchid"></span>
+                In progress
+              </span>
+            </div>
+
+            <h3 class="mt-5 font-display text-lg">CSS</h3>
+            <p class="text-sm text-mute">Styling</p>
+
+            <div class="mt-5 h-1 overflow-hidden rounded bg-lilac/15">
+              <div class="h-full w-1/3 animate-slide rounded bg-gradient-to-r from-orchid to-neon motion-reduce:animate-none"></div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Tailwind -->
+        <li class="card-edge">
+          <div class="card-body">
+            <div class="flex items-center justify-between">
+              <span class="grid h-12 w-12 place-items-center border border-neon/40 bg-neon/5 font-mono text-sm text-neon">~</span>
+              <span class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-orchid">
+                <span class="h-2 w-2 animate-pulse rounded-full bg-orchid"></span>
+                In progress
+              </span>
+            </div>
+
+            <h3 class="mt-5 font-display text-lg">Tailwind CSS</h3>
+            <p class="text-sm text-mute">Utility-first UI</p>
+
+            <div class="mt-5 h-1 overflow-hidden rounded bg-lilac/15">
+              <div class="h-full w-1/3 animate-slide rounded bg-gradient-to-r from-orchid to-neon motion-reduce:animate-none"></div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Bootstrap -->
+        <li class="card-edge">
+          <div class="card-body">
+            <div class="flex items-center justify-between">
+              <span class="grid h-12 w-12 place-items-center border border-neon/40 bg-neon/5 font-mono text-sm text-neon">B</span>
+              <span class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-orchid">
+                <span class="h-2 w-2 animate-pulse rounded-full bg-orchid"></span>
+                In progress
+              </span>
+            </div>
+
+            <h3 class="mt-5 font-display text-lg">Bootstrap</h3>
+            <p class="text-sm text-mute">Component framework</p>
+
+            <div class="mt-5 h-1 overflow-hidden rounded bg-lilac/15">
+              <div class="h-full w-1/3 animate-slide rounded bg-gradient-to-r from-orchid to-neon motion-reduce:animate-none"></div>
+            </div>
+          </div>
+        </li>
+
+        <!-- JavaScript -->
+        <li class="card-edge">
+          <div class="card-body">
+            <div class="flex items-center justify-between">
+              <span class="grid h-12 w-12 place-items-center border border-neon/40 bg-neon/5 font-mono text-sm text-neon">JS</span>
+              <span class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-orchid">
+                <span class="h-2 w-2 animate-pulse rounded-full bg-orchid"></span>
+                In progress
+              </span>
+            </div>
+
+            <h3 class="mt-5 font-display text-lg">JavaScript</h3>
+            <p class="text-sm text-mute">Interactivity</p>
+
+            <div class="mt-5 h-1 overflow-hidden rounded bg-lilac/15">
+              <div class="h-full w-1/3 animate-slide rounded bg-gradient-to-r from-orchid to-neon motion-reduce:animate-none"></div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Python -->
+        <li class="card-edge">
+          <div class="card-body">
+            <div class="flex items-center justify-between">
+              <span class="grid h-12 w-12 place-items-center border border-neon/40 bg-neon/5 font-mono text-sm text-neon">Py</span>
+              <span class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-orchid">
+                <span class="h-2 w-2 animate-pulse rounded-full bg-orchid"></span>
+                In progress
+              </span>
+            </div>
+
+            <h3 class="mt-5 font-display text-lg">Python</h3>
+            <p class="text-sm text-mute">Automation &amp; logic</p>
+
+            <div class="mt-5 h-1 overflow-hidden rounded bg-lilac/15">
+              <div class="h-full w-1/3 animate-slide rounded bg-gradient-to-r from-orchid to-neon motion-reduce:animate-none"></div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- 04 LANGUAGES -->
+    <section id="languages" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+      <p class="eyebrow">04 / Languages</p>
+
+      <h2 class="h2">
+        Three <span class="font-serif font-normal italic text-orchid">languages,</span> one voice.
+      </h2>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+        <!-- English C1 -->
+        <div class="card-edge">
+          <div class="card-body p-8">
+            <p class="font-mono text-xs text-neon">EN</p>
+            <h3 class="mt-3 font-display text-2xl">English</h3>
+            <p class="mt-1 text-orchid">C1 · Advanced</p>
+
+            <div class="mt-6 flex gap-1.5" role="img" aria-label="CEFR level C1 out of C2">
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-lilac/20"></span>
+            </div>
+
+            <div class="mt-2 flex justify-between font-mono text-[10px] text-mute">
+              <span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- French B2 -->
+        <div class="card-edge">
+          <div class="card-body p-8">
+            <p class="font-mono text-xs text-neon">FR</p>
+            <h3 class="mt-3 font-display text-2xl">French</h3>
+            <p class="mt-1 text-orchid">B2 · Upper-intermediate</p>
+
+            <div class="mt-6 flex gap-1.5" role="img" aria-label="CEFR level B2 out of C2">
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-lilac/20"></span>
+              <span class="h-2 flex-1 bg-lilac/20"></span>
+            </div>
+
+            <div class="mt-2 flex justify-between font-mono text-[10px] text-mute">
+              <span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spanish native -->
+        <div class="card-edge">
+          <div class="card-body p-8">
+            <p class="font-mono text-xs text-neon">ES</p>
+            <h3 class="mt-3 font-display text-2xl">Spanish</h3>
+            <p class="mt-1 text-orchid">Native</p>
+
+            <div class="mt-6 flex gap-1.5" role="img" aria-label="Native speaker">
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+              <span class="h-2 flex-1 bg-orchid"></span>
+            </div>
+
+            <div class="mt-2 flex justify-between font-mono text-[10px] text-mute">
+              <span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 05 EDUCATION -->
+    <section id="education" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+      <p class="eyebrow">05 / Education</p>
+
+      <h2 class="h2">
+        The <span class="font-serif font-normal italic text-neon">learning</span> log.
+      </h2>
+
+      <ol class="relative mt-12 space-y-8 border-l border-lilac/25 pl-8">
+
+        <li class="relative">
+          <span class="absolute -left-[41px] top-2 h-4 w-4 rounded-full border-2 border-orchid bg-ink"></span>
+          <p class="font-mono text-xs uppercase tracking-widest text-neon">2027</p>
+          <h3 class="mt-2 font-display text-xl">Degree in Translation Studies</h3>
+          <p class="mt-1 text-mute">Universidad de Antioquia · Medellín, Colombia</p>
+        </li>
+
+        <li class="relative">
+          <span class="absolute -left-[41px] top-2 h-4 w-4 animate-pulse rounded-full border-2 border-neon bg-neon"></span>
+          <p class="font-mono text-xs uppercase tracking-widest text-orchid">In progress</p>
+          <h3 class="mt-2 font-display text-xl">Software Development</h3>
+          <p class="mt-1 text-mute">Riwi traning program · Web development &amp; Python</p>
+        </li>
+
+        <li class="relative">
+          <span class="absolute -left-[41px] top-2 h-4 w-4 rounded-full border-2 border-lilac bg-ink"></span>
+          <p class="font-mono text-xs uppercase tracking-widest text-neon">Future goal</p>
+          <h3 class="mt-2 font-display text-xl">Certification / Magister</h3>
+          <p class="mt-1 text-mute">Localization and i18n </p>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- 06 WORK -->
+    <section id="work" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+      <p class="eyebrow">06 / Selected work</p>
+
+      <h2 class="h2">
+        Projects in Translation <span class="font-serif font-normal italic text-orchid">&</span> Code.</span>
+      </h2>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+        <article class="card-edge">
+          <div class="card-body flex flex-col p-7">
+            <span class="self-start border border-orchid/50 px-2 py-1 font-mono text-[10px] uppercase tracking-widest text-orchid">
+              Web Development · coming soon
+            </span>
+
+            <h3 class="mt-6 font-display text-xl">Bicycle Rental Platform</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">
+              A responsive website for bicycle rentals and guided cycling tours, featuring service information, pricing and an online reservation experience.
+            </p>
+            <p class="mt-6 font-mono text-xs text-neon">HTML · CSS · Bootstrap · JavaScript</p>
+          </div>
+        </article>
+
+        <article class="card-edge">
+          <div class="card-body flex flex-col p-7">
+            <span class="self-start border border-orchid/50 px-2 py-1 font-mono text-[10px] uppercase tracking-widest text-orchid">
+              Software Development · 
+            </span>
+
+            <h3 class="mt-6 font-display text-xl">Local Business Discovery Platform</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-mutLocal Business Discovery Platforme">
+              A digital platform designed to help users discover businesses, compare value for money and connect with personal shoppers.
+            </p>
+            <p class="mt-6 font-mono text-xs text-neon">HTML · Tailwind CSS · JavaScript</p>
+          </div>
+        </article>
+
+        <article class="card-edge">
+          <div class="card-body flex flex-col p-7">
+            <span class="self-start border border-orchid/50 px-2 py-1 font-mono text-[10px] uppercase tracking-widest text-orchid">
+              Localization · 
+            </span>
+
+            <h3 class="mt-6 font-display text-xl">Board Game Localization</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">
+              Spanish localization of board game content, focusing on linguistic accuracy, terminology consistency, cultural adaptation and a natural player experience.
+            <p class="mt-6 font-mono text-xs text-neon">Translation · Localization · Terminology · Cultural Adaptation</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mx-auto max-w-6xl scroll-mt-20 px-6 pb-28 pt-12">
+      <div class="card-edge">
+        <div class="cut relative overflow-hidden bg-panel px-8 py-16 text-center md:px-16">
+
+          <div aria-hidden="true" class="absolute -top-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-orchid/30 blur-3xl"></div>
+
+          <p class="eyebrow relative">07 / Contact</p>
+
+          <h2 class="relative mx-auto mt-4 max-w-2xl font-display text-3xl font-semibold leading-tight md:text-5xl">
+            Let's make your product feel <span class="font-serif font-normal italic text-orchid">native.</span>
+          </h2>
+
+          <p class="relative mx-auto mt-6 max-w-lg text-mute">
+            Open to localization projects, translation work and junior developer opportunities.
+          </p>
+
+          <div class="relative mt-10 flex flex-wrap justify-center gap-4">
+            <a href="mailto:you@example.com" class="cut bg-orchid px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-widest text-ink transition hover:bg-neon">
+              Email me
+            </a>
+
+            <a href="#" class="cut border border-neon/60 bg-neon/5 px-7 py-3.5 font-mono text-sm uppercase tracking-widest text-neon transition hover:bg-neon/15">
+              LinkedIn
+            </a>
+
+            <a href="https://github.com/lorena21zapata" class="cut border border-lilac/50 bg-lilac/5 px-7 py-3.5 font-mono text-sm uppercase tracking-widest text-lilac transition hover:bg-lilac/15">
+              GitHub
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-lilac/15 px-6 py-8 text-center font-mono text-xs uppercase tracking-widest text-mute">
+    © 2026 Lorena Zapata Arias · Built with passion
+  </footer>
+
+  <!-- JavaScript: add this only if you have created js/main.js -->
+  <script src="./js/main.js"></script>
+
 </body>
 </html>

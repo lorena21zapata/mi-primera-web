@@ -1,151 +1,108 @@
+
 @import "tailwindcss";
 
-/*Dark Variant Function*/
-@custom-variant dark (&:where(.dark, .dark *));
+/* ========================================
+   1. COLORES Y TIPOGRAFÍAS PERSONALIZADAS
+======================================== */
 
+@theme {
+  --color-ink: #0A0614;
+  --color-panel: #120A24;
+  --color-plum: #1C1038;
+  --color-orchid: #FF4FD8;
+  --color-neon: #35F2FF;
+  --color-lilac: #B9A4FF;
+  --color-pearl: #F6EEFF;
+  --color-mute: #A99BC7;
 
-/* COLOR SYSTEM */
-
-/* LIGHT MODE */
-
-:root {
-  color-scheme: light;
-
-  /* Backgrounds */
-  --bg: #F5F3FA;
-  --surface: #FFFFFF;
-  --surface-2: #E8E2F2;
-
-  /* Typography */
-  --text: #222039;
-  --text-muted: #68647A;
-
-  /* Borders */
-  --border: #DCD5E8;
-
-  /* Brand colors */
-  --primary: #8146C7;
-  --secondary: #D93683;
-  --accent: #087E83;
-  --highlight: #638F2C;
-}
-
-
-/* DARK MODE */
-
-.dark {
-  color-scheme: dark;
-
-  /* Backgrounds */
-  --bg: #090A12;
-  --surface: #121525;
-  --surface-2: #20263B;
-
-  /* Typography */
-  --text: #F2F1FA;
-  --text-muted: #A7A6B8;
-
-  /* Borders */
-  --border: #34344B;
-
-  /* Brand colors */
-  --primary: #C77DFF;
-  --secondary: #FF5DA2;
-  --accent: #42E8E0;
-  --highlight: #B8F36B;
-}
-
-
-/* =========================================
-   03. TAILWIND THEME
-========================================= */
-
-@theme inline {
-
-  /* Backgrounds */
-  --color-page: var(--bg);
-  --color-surface: var(--surface);
-  --color-surface-alt: var(--surface-2);
-
-  /* Typography */
-  --color-content: var(--text);
-  --color-muted: var(--text-muted);
-
-  /* Borders */
-  --color-line: var(--border);
-
-  /* Brand */
-  --color-brand: var(--primary);
-  --color-neon-pink: var(--secondary);
-  --color-cyber: var(--accent);
-  --color-neon-lime: var(--highlight);
-
-  /* Typography */
-  --font-heading: "Space Grotesk", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-display: "Unbounded", sans-serif;
+  --font-serif: "Instrument Serif", serif;
+  --font-sans: "Outfit", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-slide: slide 2.4s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+/* ========================================
+   2. ANIMACIONES PERSONALIZADAS
+======================================== */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 
-/* =========================================
-   04. BASE STYLES
-========================================= */
+/* ========================================
+   3. CLASES PERSONALIZADAS
+======================================== */
 
-@layer base {
+@layer components {
 
-  * {
-    box-sizing: border-box;
+  /* Forma geométrica recortada */
+  .cut,
+  .card-edge,
+  .card-body {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 18px) 0,
+      100% 18px,
+      100% 100%,
+      18px 100%,
+      0 calc(100% - 18px)
+    );
   }
 
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+  /* Etiquetas pequeñas */
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.25em] text-neon;
   }
 
-  body {
-    margin: 0;
-    min-height: 100vh;
-
-    background-color: var(--bg);
-    color: var(--text);
-
-    font-family: var(--font-body);
-
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
+  /* Títulos de sección */
+  .h2 {
+    @apply mt-3 font-display text-3xl font-semibold leading-tight md:text-4xl;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-heading);
+  /* Borde degradado de tarjetas */
+  .card-edge {
+    @apply bg-gradient-to-br from-orchid/70 via-lilac/20 to-neon/60 p-px;
   }
 
-  code,
-  pre,
-  .font-mono {
-    font-family: var(--font-mono);
+  /* Interior de tarjetas */
+  .card-body {
+    @apply h-full bg-panel p-6;
   }
 
-  a {
-    text-decoration: none;
+  /* Etiquetas de habilidades */
+  .chip {
+    @apply rounded-full border border-lilac/30 bg-plum/60 px-3.5 py-1.5 text-sm text-pearl;
   }
 
-  button {
-    cursor: pointer;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-  }
-
-  ::selection {
-    background-color: var(--primary);
-    color: #090A12;
-  }
 }
